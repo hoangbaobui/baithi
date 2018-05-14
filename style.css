@@ -107,6 +107,9 @@ color:#0fa0dd;
 width:180px;
 float:left;
 padding:0 0 0 5px;
+font-size:13px;
+
+
 }
 .title_box{
 width:180px;
@@ -139,7 +142,9 @@ width:166px;height:25px;display:block; border-bottom:1px #e4e4e4 dashed; backgro
 text-decoration:none;color:#504b4b;padding:0 0 0 14px; line-height:25px;
 }
 ul.left_menu li.even a:hover, ul.left_menu li.odd a:hover{
-color:#000; text-decoration:underline;
+color:#199ECD; 
+text-decoration:none;
+
 }
 
 .border_box{
@@ -152,6 +157,7 @@ background:url(images/box_bottom_bg.gif) no-repeat center bottom;
 color:#ff8a00;
 padding:5px 0 5px 0;
 font-weight:bold;
+font-size:13px;
 }
 .product_title a{
 text-decoration:none;
@@ -171,9 +177,11 @@ padding:5px 0 5px 0;
 span.reduce{
 color:#666666;
 text-decoration:line-through;
+font-size:13px;
 }
 span.price{
 color: #ff8a00;
+font-size:13px;
 }
 /*----------newsletter--------------*/
 input.newsletter_input{
@@ -197,6 +205,7 @@ color:#169ECC;
 width:180px;
 text-align:center;
 padding:10px 0 10px 0;
+font-size:12px;
 }
 /*--------------oferta------------------*/
 .oferta{
@@ -223,7 +232,7 @@ padding:20px 0 0 30px;
 }
 .oferta_text{
 padding:5px 0 5px 0;
-font-size:12px;
+font-size:13px;
 color:#159dcc;
 text-align:justify;
 line-height:15px;
@@ -381,7 +390,8 @@ padding:3px;
 }
 .prod_price_big{
 padding:5px 0 5px 0;
-font-size:16px;
+font-size:12px;
+font-weight:bold;
 }
 a.addtocart{
 width:76px;
@@ -486,8 +496,11 @@ text-decoration:underline;
 
 .center_footer{
 float:left;
-width:200px;
+width:250px;
 text-align:center;
 color:#666666;
 padding:10px 0 0 60px;
+font-size:13px;
+font-weight: bold;
+font-style: italic;
 }

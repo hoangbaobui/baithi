@@ -160,7 +160,7 @@
 						  Số Lượng Tồn Kho :<span class="blue"> <?php echo $row["SOLUONG"]; ?></span><br>
 						  Mô Tả :<span class="blue"> <?php echo $row["MOTA"]; ?></span><br>
 						</div>
-						<div class="prod_price_big"><span class="price"><?php echo number_format($row["GIAKM"]); ?></span></div>
+						<div class="prod_price_big">Giá Giảm Còn : <span class="price"><?php echo number_format($row["GIAKM"]); ?></span></div>
 						</div>
 					</div>
 				  </div>

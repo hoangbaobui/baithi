@@ -105,7 +105,7 @@
 					
 				<div class="prod_box">
 				<div class="center_prod_box">
-					<div class="product_title"><a href="chitiet.php?id=<?php echo $row["IDDT"]; ?>" target="_blank"><?php echo $row["TENDT"]; ?></a></div>
+					<div class="product_title"><a href="chitiet.php?id=<?php echo $row["IDDT"]; ?>" target="_blank"><?php echo $row["TENDT"]; ?></a> </div>
 					<div class="product_img"><a href="chitiet.php?id=<?php echo $row["IDDT"]; ?>" target="_blank"><img src="<?php echo $row["HINHANH"]; ?>" width="60" height="80"  /></a></div>
 					<div class="prod_price"><span class="reduce"><?php echo number_format($row["GIANIEMYET"]); ?></span> <span class="price"><?php echo number_format($row["GIAKM"]); ?></span></div>
 				</div>

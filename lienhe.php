@@ -1,7 +1,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<title>Tools Shop - Contact</title>
+<title>Liên Hệ Cửa Hàng</title>
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 <link rel="stylesheet" type="text/css" href="style.css" />
 <!--[if IE 6]>
@@ -44,28 +44,50 @@ close();
   <div id="header">
     <div class="top_right">
       <div class="languages">
-        
-       </div>
+      </div>
     </div>
-    <div id="logo"> </div>
-  </div>
+   <div id="logo"> </div>
+ </div>
   <div id="main_content">
-    
+    <div id="menu_tab">
+      <ul class="menu">
+        <li><a href="index.php" class="nav"> Trang Chủ </a></li>
+        <li class="divider"></li>
+        <li><a href="sanpham.php" class="nav">Sản Phẩm</a></li>
+        <li class="divider"></li>
+        <li><a href="khuyenmai.php" class="nav">Khuyến Mãi</a></li>
+        <li class="divider"></li>
+        <li><a href="lienhe.php" class="nav">Liên Hệ</a></li>
+      </ul>
+    </div>
     <!-- end of menu tab -->
-    <div class="crumb_navigation"></div>
+   
     <div class="left_content">
       <div class="title_box">Liên Hệ</div>
      
-      <div class="banner_adds">ádasdsadasdsadas</div>
+		<div class="banner_adds">
+				Tòa nhà ETown 2, lầu 5, phòng 5.1 - số 364 Cộng Hòa, Tân Bình, TP HCM
+				Địa chỉ Đăng ký kinh doanh: 128 Trần Quang Khải, P. Tân Định, Q1, TP HCM
+				Điện thoại: (028) 38 125 960
+				Fax: 028 38 125 961
+		</div>
     </div>
     <!-- end of left content -->
     <div class="center_content">
-      <div class="center_title_bar">Thông Tin</div>
+      <div class="center_title_bar">Thông Tin Liên Hệ</div>
       <div class="prod_box_big">
         <div class="center_prod_box_big">
           <div class="contact_form">
             <div class="form_row">
-              <label class="contact"><strong>Name:</strong></label>
+              <label class="contact"><strong>Họ Tên:</strong></label>
+              <input type="text" class="contact_input" />
+            </div>
+            <div class="form_row">
+              <label class="contact"><strong>Địa Chỉ:</strong></label>
+              <input type="text" class="contact_input" />
+            </div>
+            <div class="form_row">
+              <label class="contact"><strong>Điện Thoại:</strong></label>
               <input type="text" class="contact_input" />
             </div>
             <div class="form_row">
@@ -73,15 +95,7 @@ close();
               <input type="text" class="contact_input" />
             </div>
             <div class="form_row">
-              <label class="contact"><strong>Phone:</strong></label>
-              <input type="text" class="contact_input" />
-            </div>
-            <div class="form_row">
-              <label class="contact"><strong>Company:</strong></label>
-              <input type="text" class="contact_input" />
-            </div>
-            <div class="form_row">
-              <label class="contact"><strong>Message:</strong></label>
+              <label class="contact"><strong>Nội Dung:</strong></label>
               <textarea class="contact_textarea" ></textarea>
             </div>
             <div class="form_row"> <a href="#" class="prod_details">Gửi</a> </div>
@@ -92,8 +106,11 @@ close();
     <!-- end of center content -->
     <div class="right_content">
       <div class="title_box">Liên Hệ</div>
-      
-      <div class="banner_adds"> ádss </div>
+		<div class="banner_adds"> 
+			Hỗ Trợ Khách Hàng (7h30 đến 22h): 1800.1060 hoặc 028.3622.1060
+			Tổng đài khiếu nại: 1800.1062 
+		</div>
+		<iframe scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps/ms?msa=0&amp;msid=209366815787131953673.0004cafc86bc98e1ed2bd&amp;ie=UTF8&amp;t=m&amp;ll=10.801691,106.641026&amp;spn=0.010117,0.011115&amp;z=15&amp;output=embed" width="190" height="240" frameborder="0"></iframe>
     </div>
     <!-- end of right content -->
   </div>
@@ -101,8 +118,8 @@ close();
   <div class="footer">
     <div class="left_footer">  </div>
     <div class="center_footer"> 180 Cao Lỗ, Phường 4, Quận 8, TP.HCM <br />
-      <a href="http://csscreme.com"><img src="images/csscreme.jpg" alt="csscreme" title="csscreme" border="0" /></a><br />
-      <img src="images/payment.gif" alt="" /> </div>
+      
+	  </div>
     <div class="right_footer"> </div>
   </div>
 </div>
