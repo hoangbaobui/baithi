@@ -120,10 +120,9 @@
     </div>
     <!-- end of left content -->
     <div class="center_content">
-      
-      <div class="center_title_bar">Tìm Thấy</div>
      
-      
+		<div class="center_title_bar">
+	 
 		<?php
 			$servername = "localhost";
 			$username = "root";
@@ -132,6 +131,36 @@
 
 			// Create connection
 			$conn = new mysqli($servername, $username, $password, $dbname);
+			
+			// Check connection
+			if ($conn->connect_error) {
+			die("Connection failed: " . $conn->connect_error);
+			}
+
+			$sql = "SELECT IDDT, TENDT, MOTA, GIANIEMYET, GIAKM, SOLUONG, MADT, HINHANH
+					FROM chitietdt
+					where TENDT LIKE '%".$_GET['tukhoa']."%'";
+			$result = $conn->query($sql);
+			
+			$soluongtimkiem = mysqli_num_rows($result);
+			
+			echo 'Tìm Thấy '.$soluongtimkiem.' Sản Phẩm';
+			$conn->close();
+		?> 
+		
+		</div>
+	  
+   
+	  
+		<?php
+			$servername = "localhost";
+			$username = "root";
+			$password = "";
+			$dbname = "cuahangdienthoai";
+
+			// Create connection
+			$conn = new mysqli($servername, $username, $password, $dbname);
+			
 			// Check connection
 			if ($conn->connect_error) {
 			die("Connection failed: " . $conn->connect_error);
@@ -143,11 +172,12 @@
 			$result = $conn->query($sql);
 
 			if ($result->num_rows > 0) {
+				
 			// output data of each row
-			while($row = $result->fetch_assoc()) {
-			
+			while($row = $result->fetch_assoc()) 
+			{
 				?>
-					
+				
 				<div class="prod_box">
 				<div class="center_prod_box">
 					<div class="product_title"><a href="chitiet.php?id=<?php echo $row["IDDT"]; ?>" target="_blank"><?php echo $row["TENDT"]; ?></a></div>
@@ -172,7 +202,7 @@
       <div class="border_box">
 		
 		<form action="timkiem.php">
-			<input type="text" name="tukhoa" value="">
+			<input type="text" name="tukhoa" value="<?php echo $_GET['tukhoa']; ?>">
 			<input type="submit" value="Tìm Kiếm">
 		</form> 
 		

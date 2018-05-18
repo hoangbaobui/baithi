@@ -2,10 +2,10 @@
 -- version 4.8.0.1
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Generation Time: May 13, 2018 at 09:42 AM
--- Server version: 10.1.32-MariaDB
--- PHP Version: 7.2.5
+-- Máy chủ: 127.0.0.1
+-- Thời gian đã tạo: Th5 18, 2018 lúc 06:01 PM
+-- Phiên bản máy phục vụ: 10.1.32-MariaDB
+-- Phiên bản PHP: 7.2.5
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -19,13 +19,33 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `cuahangdienthoai`
+-- Cơ sở dữ liệu: `cuahangdienthoai`
 --
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `chitietdt`
+-- Cấu trúc bảng cho bảng `account`
+--
+
+CREATE TABLE `account` (
+  `taikhoan` varchar(50) NOT NULL,
+  `matkhau` varchar(50) NOT NULL,
+  `hoten` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Đang đổ dữ liệu cho bảng `account`
+--
+
+INSERT INTO `account` (`taikhoan`, `matkhau`, `hoten`) VALUES
+('baobui', '123', 'Bùi Hoàng Bảo'),
+('user', '456', 'User thường');
+
+-- --------------------------------------------------------
+
+--
+-- Cấu trúc bảng cho bảng `chitietdt`
 --
 
 CREATE TABLE `chitietdt` (
@@ -40,7 +60,7 @@ CREATE TABLE `chitietdt` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `chitietdt`
+-- Đang đổ dữ liệu cho bảng `chitietdt`
 --
 
 INSERT INTO `chitietdt` (`IDDT`, `TENDT`, `MOTA`, `GIANIEMYET`, `GIAKM`, `SOLUONG`, `MADT`, `HINHANH`) VALUES
@@ -69,7 +89,7 @@ INSERT INTO `chitietdt` (`IDDT`, `TENDT`, `MOTA`, `GIANIEMYET`, `GIAKM`, `SOLUON
 -- --------------------------------------------------------
 
 --
--- Table structure for table `dienthoai`
+-- Cấu trúc bảng cho bảng `dienthoai`
 --
 
 CREATE TABLE `dienthoai` (
@@ -79,7 +99,7 @@ CREATE TABLE `dienthoai` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `dienthoai`
+-- Đang đổ dữ liệu cho bảng `dienthoai`
 --
 
 INSERT INTO `dienthoai` (`MADT`, `TENDT`, `GHICHU`) VALUES
@@ -95,38 +115,44 @@ INSERT INTO `dienthoai` (`MADT`, `TENDT`, `GHICHU`) VALUES
 ('XIAOMI', 'XIAO MI', '');
 
 --
--- Indexes for dumped tables
+-- Chỉ mục cho các bảng đã đổ
 --
 
 --
--- Indexes for table `chitietdt`
+-- Chỉ mục cho bảng `account`
+--
+ALTER TABLE `account`
+  ADD PRIMARY KEY (`taikhoan`);
+
+--
+-- Chỉ mục cho bảng `chitietdt`
 --
 ALTER TABLE `chitietdt`
   ADD PRIMARY KEY (`IDDT`),
   ADD KEY `MADT` (`MADT`);
 
 --
--- Indexes for table `dienthoai`
+-- Chỉ mục cho bảng `dienthoai`
 --
 ALTER TABLE `dienthoai`
   ADD PRIMARY KEY (`MADT`);
 
 --
--- AUTO_INCREMENT for dumped tables
+-- AUTO_INCREMENT cho các bảng đã đổ
 --
 
 --
--- AUTO_INCREMENT for table `chitietdt`
+-- AUTO_INCREMENT cho bảng `chitietdt`
 --
 ALTER TABLE `chitietdt`
   MODIFY `IDDT` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
 
 --
--- Constraints for dumped tables
+-- Các ràng buộc cho các bảng đã đổ
 --
 
 --
--- Constraints for table `chitietdt`
+-- Các ràng buộc cho bảng `chitietdt`
 --
 ALTER TABLE `chitietdt`
   ADD CONSTRAINT `chitietdt_ibfk_1` FOREIGN KEY (`MADT`) REFERENCES `dienthoai` (`MADT`);
