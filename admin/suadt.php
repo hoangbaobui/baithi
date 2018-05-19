@@ -5,10 +5,10 @@
 	// Đăng nhập thành công
 	if (isset( $_SESSION['taikhoan'] ) ) 
 	{    
-		$servername = "localhost";
-		$username = "root";
-		$password = "";
-		$dbname = "cuahangdienthoai";
+		$servername = "sql206.byethost33.com";
+		$username = "b33_22096513";
+		$password = "r8c9325n";
+		$dbname = "b33_22096513_cuahangdienthoai";
 		
 		
 		// Create connection

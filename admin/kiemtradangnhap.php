@@ -2,10 +2,10 @@
 	// Khoi chay Session
 	session_start();
 
-	$servername = "localhost";
-	$username = "root";
-	$password = "";
-	$dbname = "cuahangdienthoai";	
+	$servername = "sql206.byethost33.com";
+	$username = "b33_22096513";
+	$password = "r8c9325n";
+	$dbname = "b33_22096513_cuahangdienthoai";	
 	
 	// Create connection
 	$conn = new mysqli($servername, $username, $password, $dbname);
@@ -23,7 +23,7 @@
 	if($soluongtimkiem > 0)
 	{
 		$_SESSION['taikhoan'] = $_GET['taikhoan'];
-		header("Location: http://localhost/baithi/admin/quanlydt.php");
+		header("Location: http://bhbao96.byethost33.com/admin/quanlydt.php");
 	}
 	else
 	{

@@ -30,6 +30,8 @@
         <li><a href="../khuyenmai.php" class="nav">Khuyến Mãi</a></li>
         <li class="divider"></li>
         <li><a href="../lienhe.php" class="nav">Liên Hệ</a></li>
+		<li class="divider"></li>
+        <li><a href="thoat.php" class="nav">Thoát</a></li>
       </ul>
     </div>
     <!-- end of menu tab -->
@@ -53,10 +55,10 @@
 			</tr>			
 			
 			<?php
-			$servername = "localhost";
-			$username = "root";
-			$password = "";
-			$dbname = "cuahangdienthoai";
+			$servername = "sql206.byethost33.com";
+			$username = "b33_22096513";
+			$password = "r8c9325n";
+			$dbname = "b33_22096513_cuahangdienthoai";
 
 			// Create connection
 			$conn = new mysqli($servername, $username, $password, $dbname);
