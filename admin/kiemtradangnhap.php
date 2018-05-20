@@ -15,8 +15,8 @@
 	}
 
 	$sql = "SELECT *
-			FROM ACCOUNT WHERE TAIKHOAN = '".$_GET['taikhoan']."'
-			AND MATKHAU ='".$_GET['matkhau']."'";
+			FROM account WHERE taikhoan = '".$_GET['taikhoan']."'
+			AND matkhau ='".$_GET['matkhau']."'";
 	$result = $conn->query($sql);
 	$soluongtimkiem = mysqli_num_rows($result);
 		
