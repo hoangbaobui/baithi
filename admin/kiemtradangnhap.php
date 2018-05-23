@@ -2,10 +2,10 @@
 	// Khoi chay Session
 	session_start();
 
-	$servername = "sql206.byethost33.com";
-	$username = "b33_22096513";
-	$password = "r8c9325n";
-	$dbname = "b33_22096513_cuahangdienthoai";	
+	$servername = "localhost";
+	$username = "root";
+	$password = "";
+	$dbname = "cuahangdienthoai";	
 	
 	// Create connection
 	$conn = new mysqli($servername, $username, $password, $dbname);
@@ -18,12 +18,13 @@
 			FROM account WHERE taikhoan = '".$_GET['taikhoan']."'
 			AND matkhau ='".$_GET['matkhau']."'";
 	$result = $conn->query($sql);
-	$soluongtimkiem = mysqli_num_rows($result);
+	$ktrataikhoan = mysqli_num_rows($result);
 		
-	if($soluongtimkiem > 0)
+	if($ktrataikhoan > 0)
 	{
 		$_SESSION['taikhoan'] = $_GET['taikhoan'];
-		header("Location: http://bhbao96.byethost33.com/admin/quanlydt.php");
+		 header('Location: hangdt_quanly.php');
+		//header("Location: http://bhbao96.byethost33.com/admin/quanlydt.php");
 	}
 	else
 	{

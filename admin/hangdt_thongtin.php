@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <body>
-<form action="suadt.php" method="get">
+<form action="hangdt_sua.php" method="get">
   Mã Điện Thoại:<br>
   <input type="text" name="madt" value="<?php echo $_GET['iddt']; ?>" readonly>
   <br>

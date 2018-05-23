@@ -33,10 +33,10 @@
         
 		
 		<?php
-			$servername = "sql206.byethost33.com";
-			$username = "b33_22096513";
-			$password = "r8c9325n";
-			$dbname = "b33_22096513_cuahangdienthoai";
+			$servername = "localhost";
+			$username = "root";
+			$password = "";
+			$dbname = "cuahangdienthoai";
 
 			// Create connection
 			$conn = new mysqli($servername, $username, $password, $dbname);
@@ -78,10 +78,10 @@
       </ul>
       <div class="title_box">Sản Phẩm Đặc Biệt</div>
       <?php
-			$servername = "sql206.byethost33.com";
-			$username = "b33_22096513";
-			$password = "r8c9325n";
-			$dbname = "b33_22096513_cuahangdienthoai";
+			$servername = "localhost";
+			$username = "root";
+			$password = "";
+			$dbname = "cuahangdienthoai";
 
 			// Create connection
 			$conn = new mysqli($servername, $username, $password, $dbname);
@@ -124,10 +124,10 @@
 		<div class="center_title_bar">
 	 
 		<?php
-			$servername = "sql206.byethost33.com";
-			$username = "b33_22096513";
-			$password = "r8c9325n";
-			$dbname = "b33_22096513_cuahangdienthoai";
+			$servername = "localhost";
+			$username = "root";
+			$password = "";
+			$dbname = "cuahangdienthoai";
 
 			// Create connection
 			$conn = new mysqli($servername, $username, $password, $dbname);
@@ -153,10 +153,10 @@
    
 	  
 		<?php
-			$servername = "sql206.byethost33.com";
-			$username = "b33_22096513";
-			$password = "r8c9325n";
-			$dbname = "b33_22096513_cuahangdienthoai";
+			$servername = "localhost";
+			$username = "root";
+			$password = "";
+			$dbname = "cuahangdienthoai";
 
 			// Create connection
 			$conn = new mysqli($servername, $username, $password, $dbname);
@@ -209,10 +209,10 @@
      
       <div class="title_box">Sản Phẩm Mới Nhất</div>
       <?php
-			$servername = "sql206.byethost33.com";
-			$username = "b33_22096513";
-			$password = "r8c9325n";
-			$dbname = "b33_22096513_cuahangdienthoai";
+			$servername = "localhost";
+			$username = "root";
+			$password = "";
+			$dbname = "cuahangdienthoai";
 
 			// Create connection
 			$conn = new mysqli($servername, $username, $password, $dbname);

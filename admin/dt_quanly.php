@@ -31,6 +31,10 @@
         <li class="divider"></li>
         <li><a href="../lienhe.php" class="nav">Liên Hệ</a></li>
 		<li class="divider"></li>
+		<li><a href="hangdt_quanly.php" class="nav">QL Hãng</a></li>
+		<li class="divider"></li>
+		<li><a href="dt_quanly.php" class="nav">QL Điện Thoại</a></li>
+		<li class="divider"></li>
         <li><a href="thoat.php" class="nav">Thoát</a></li>
       </ul>
     </div>
@@ -48,17 +52,21 @@
 			?>
 			<table style="width:100%">
 			<tr>
-			<th>STT</th>
-			<th>MÃ ĐIỆN THOẠI</th> 
-			<th>TÊN ĐIỆN THOẠI</th>
-			<th>CHỨC NĂNG</th>
+			<th>MÃ ĐT</th> 
+			<th>TÊN ĐT</th>
+			<th>MÔ TẢ</th>
+			<th>GIÁ N.YẾT</th>
+			<th>GIÁ KM</th>
+			<th>SỐ LƯỢNG</th>
+			<th>HÃNG ĐT</th>
+			<th>HÌNH ẢNH</th>
 			</tr>			
 			
 			<?php
-			$servername = "sql206.byethost33.com";
-			$username = "b33_22096513";
-			$password = "r8c9325n";
-			$dbname = "b33_22096513_cuahangdienthoai";
+			$servername = "localhost";
+			$username = "root";
+			$password = "";
+			$dbname = "cuahangdienthoai";
 
 			// Create connection
 			$conn = new mysqli($servername, $username, $password, $dbname);
@@ -67,25 +75,27 @@
 			die("Connection failed: " . $conn->connect_error);
 			}
 
-			$sql = "SELECT MADT, TENDT FROM dienthoai";
+			$sql = "SELECT IDDT, TENDT, MOTA, GIANIEMYET, GIAKM, SOLUONG, MADT, HINHANH FROM chitietdt";
 			$result = $conn->query($sql);
 			
-			// đếm
-			$dem=0;
 			
 			if ($result->num_rows > 0) {
 			// output data of each row
 			while($row = $result->fetch_assoc()) 
 			{
-				$dem++;
 				?>
 					<tr>
-					<td><?php echo $dem; ?></td>
-					<td><?php echo $row["MADT"]; ?></td> 
+					<td><?php echo $row["IDDT"]; ?></td> 
 					<td><?php echo $row["TENDT"]; ?></td>
+					<td><?php echo ''; ?></td>
+					<td><?php echo $row["GIANIEMYET"]; ?></td>
+					<td><?php echo $row["GIAKM"]; ?></td>
+					<td><?php echo $row["SOLUONG"]; ?></td>
+					<td><?php echo $row["MADT"]; ?></td>
+					<td><?php echo $row["HINHANH"]; ?></td>
 					<td>
-						<a href="xoadt.php?iddt=<?php echo $row["MADT"]; ?>" target="_blank" >XÓA</a>
-						<a href="thongtinsuadt.php?iddt=<?php echo $row["MADT"]; ?>&tendt=<?php echo $row["TENDT"]; ?>" target="_blank" >SỬA</a>
+						<a href="dt_xoa.php?iddt=<?php echo $row["IDDT"]; ?>&tendt=<?php echo $row["TENDT"]; ?>" target="_blank" >XÓA</a>
+						<a href="dt_thongtin.php?iddt=<?php echo $row["IDDT"]; ?>&tendt=<?php echo $row["TENDT"]; ?>&gianiemyet=<?php echo $row["GIANIEMYET"]; ?>&giakm=<?php echo $row["GIAKM"]; ?>&soluong=<?php echo $row["SOLUONG"]; ?>&hinhanh=<?php echo $row["HINHANH"]; ?>" target="_blank" >SỬA</a>
 					</td>
 					</tr>
 				<?php
@@ -98,12 +108,27 @@
 			
 			</table>
 			
-			<form action="themmoidt.php" method="get">
-				Mã Điện Thoại:<br>
-				<input type="text" name="madt" value="">
-				<br>
+
+			
+			<form action="dt_them.php" method="get">
+				
 				Tên Điện Thoại<br>
-				<input type="text" name="tendt" value="">
+				<input type="text" name="tendt" value=""><br>
+				
+				Mã Hãng ĐT<br>
+				<input type="text" name="madt" value=""><br>
+
+				Giá Niêm Yết<br>
+				<input type="text" name="gianiemyet" value=""><br>
+
+				Giá KM<br>
+				<input type="text" name="giakm" value=""><br>
+
+				Số Lượng<br>
+				<input type="text" name="soluong" value=""><br>
+
+				Hình Ảnh<br>
+				<input type="text" name="hinhanh" value=""><br>
 				<input type="submit" value="Thêm Mới">
 			</form> 
 			

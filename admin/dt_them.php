@@ -1,14 +1,14 @@
 <?php
 	// Khoi chay Session
 	session_start();
-
+	
 	// Đăng nhập thành công
 	if (isset( $_SESSION['taikhoan'] ) ) 
 	{    
-		$servername = "sql206.byethost33.com";
-		$username = "b33_22096513";
-		$password = "r8c9325n";
-		$dbname = "b33_22096513_cuahangdienthoai";
+		$servername = "localhost";
+		$username = "root";
+		$password = "";
+		$dbname = "cuahangdienthoai";
 		
 		
 		// Create connection
@@ -18,16 +18,16 @@
 		die("Connection failed: " . $conn->connect_error);
 		}
 
-		$sql = "UPDATE dienthoai
-				SET TENDT = '".$_GET['tendt']."'
-				WHERE MADT='".$_GET['madt']."'";
+		$sql = "INSERT INTO chitietdt (TENDT, GIANIEMYET, GIAKM, SOLUONG, MADT, HINHANH)
+				VALUES ('".$_GET['tendt']."', ".$_GET['gianiemyet'].", ".$_GET['giakm'].", ".$_GET['soluong'].", '".$_GET['madt']."', '".$_GET['hinhanh']."')";
 		$result = $conn->query($sql);
 		$conn->close();
 		
-		echo 'CẬP NHẬT THÀNH CÔNG !';
+		echo 'THÊM MỚI THÀNH CÔNG !';
 	} 
 	else // Chưa đăng nhập
 	{    
 		return;
 	}
 ?> 
+<br><a href="dt_quanly.php">Trở Về</a>

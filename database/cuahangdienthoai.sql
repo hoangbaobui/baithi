@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th5 18, 2018 lúc 06:01 PM
+-- Thời gian đã tạo: Th5 23, 2018 lúc 05:10 PM
 -- Phiên bản máy phục vụ: 10.1.32-MariaDB
 -- Phiên bản PHP: 7.2.5
 
@@ -40,7 +40,7 @@ CREATE TABLE `account` (
 
 INSERT INTO `account` (`taikhoan`, `matkhau`, `hoten`) VALUES
 ('baobui', '123', 'Bùi Hoàng Bảo'),
-('user', '456', 'User thường');
+('vanhung', '123', 'Trần Văn Hùng');
 
 -- --------------------------------------------------------
 
