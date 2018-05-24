@@ -131,6 +131,12 @@
 				<input type="text" name="hinhanh" value=""><br>
 				<input type="submit" value="Thêm Mới">
 			</form> 
+			<br><br>
+			<form target="_blank" action="upload.php" method="post" enctype="multipart/form-data">
+				Upload Hình Ảnh:
+				<input type="file" name="fileToUpload" id="fileToUpload">
+				<input type="submit" value="Upload Image" name="submit">
+			</form>
 			
 			<?php
 		} 
